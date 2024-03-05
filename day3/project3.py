@@ -22,15 +22,19 @@ print('''  _______\\__
 print("Your mission is to find the treasure.")
 
 path = input("Which path you want to choose, left or right? ").lower()
+
 if path == "left":
-    print("Game over, you should always chose what's right, hah ahahahah")
-elif:
-    x = input("there is a river, do you want to wait or swim? ")
-    if x == "swim":
-        print("Game over, didn't i tell you its nile river, hahahahahahah")
-    else:
-        y = input("these is a door, which one you want, red , blue, or yellow ").lower()
-        if y == "yellow":
-            print("you won, this is the only magical door hahahahahahahahahah")
+    #game continues
+    choice1 = input("swim or wait ").lower()
+    if choice1 == "wait":
+        #game continues
+        choice2 = input("which door? red, blue or yellow").lower()
+        if choice2 == "yellow":
+            #game continue
+            print("you won")
         else:
-            print("Game over, now hit your head in this closed door or go back with your camel.")
+            print("game over")
+    else:
+        print("game over")
+else:
+    print("game over")
